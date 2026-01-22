@@ -34,13 +34,24 @@ class MyModel:
     """
     This is a starter model to get you started. Feel free to modify this file.
     """
-    def __init__(self):
-        self.trainer = None
+    @classmethod
+    def __init__(cls):
+        cls.trainer = None
+        cls.tokenizer = AutoTokenizer.from_pretrained(model_name)
+
     @classmethod
     def load_training_data(cls):
         # Shakespeare next character prediction dataset
         train_dataset = load_dataset("flwrlabs/shakespeare", split="train").shuffle(seed=42)
-        return train_dataset['x'], train_dataset['y']
+        # map to prompt solution pairs
+        prompt = train_dataset['x']
+        input_text = cls.tokenizer.apply_chat_template(
+            prompt,
+            tokenize=False,
+            add_generation_prompt=True
+        )
+        solution = train_dataset['y']
+        return {'prompt': input_text, 'solution': solution}
 
     @classmethod
     def load_test_data(cls, fname):
@@ -84,19 +95,15 @@ class MyModel:
         return preds
 
     def save(self, work_dir):
-        # your code here
-        # this particular model has nothing to save, but for demonstration purposes we will save a blank file
-        with open(os.path.join(work_dir, 'model.checkpoint'), 'wt') as f:
-            f.write('dummy save')
+        # save model to work_dir from trainer
+        self.trainer.model.save_pretrained(work_dir)
 
     @classmethod
     def load(cls, work_dir):
-        # your code here
-        # this particular model has nothing to load, but for demonstration purposes we will load a blank file
-        with open(os.path.join(work_dir, 'model.checkpoint')) as f:
-            dummy_save = f.read()
-        return MyModel()
-
+        # load from work_dir
+        model = cls()
+        model.trainer = GRPOTrainer.load_from_checkpoint(work_dir)
+        return model
 
 if __name__ == '__main__':
     parser = ArgumentParser(formatter_class=ArgumentDefaultsHelpFormatter)

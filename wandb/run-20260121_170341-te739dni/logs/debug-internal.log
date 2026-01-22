@@ -1,0 +1,11 @@
+{"time":"2026-01-21T17:03:42.017345722-08:00","level":"INFO","msg":"stream: starting","core version":"0.23.0"}
+{"time":"2026-01-21T17:03:42.319425707-08:00","level":"INFO","msg":"stream: created new stream","id":"te739dni"}
+{"time":"2026-01-21T17:03:42.319467304-08:00","level":"INFO","msg":"handler: started","stream_id":"te739dni"}
+{"time":"2026-01-21T17:03:42.319576987-08:00","level":"INFO","msg":"stream: started","id":"te739dni"}
+{"time":"2026-01-21T17:03:42.319585633-08:00","level":"INFO","msg":"sender: started","stream_id":"te739dni"}
+{"time":"2026-01-21T17:03:42.319587507-08:00","level":"INFO","msg":"writer: started","stream_id":"te739dni"}
+{"time":"2026-01-21T17:03:42.850006885-08:00","level":"INFO","msg":"stream: closing","id":"te739dni"}
+{"time":"2026-01-21T17:03:43.897901523-08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-01-21T17:03:44.046422302-08:00","level":"INFO","msg":"handler: closed","stream_id":"te739dni"}
+{"time":"2026-01-21T17:03:44.046530883-08:00","level":"INFO","msg":"sender: closed","stream_id":"te739dni"}
+{"time":"2026-01-21T17:03:44.04654025-08:00","level":"INFO","msg":"stream: closed","id":"te739dni"}

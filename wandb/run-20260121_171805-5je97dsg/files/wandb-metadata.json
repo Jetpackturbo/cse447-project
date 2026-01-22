@@ -1,0 +1,26 @@
+{
+  "os": "Linux-6.12.0-124.21.1.el10_1.x86_64-x86_64-with-glibc2.39",
+  "python": "CPython 3.12.12",
+  "startedAt": "2026-01-22T01:18:05.473016Z",
+  "args": [
+    "test",
+    "--work_dir",
+    "example",
+    "--test_data",
+    "example/input.txt",
+    "--test_output",
+    "output/pred.txt"
+  ],
+  "program": "/data/cse447-project/src/myprogram.py",
+  "codePath": "src/myprogram.py",
+  "codePathLocal": "src/myprogram.py",
+  "git": {
+    "remote": "git@github.com:Jetpackturbo/cse447-project.git",
+    "commit": "769ed119529ee36c171d65edf41cde84a6c72287"
+  },
+  "email": "jackpli@uw.edu",
+  "root": "/data/cse447-project",
+  "host": "vhagar.cs.washington.edu",
+  "executable": "/usr/bin/python",
+  "writerId": "zskxxq6o0kem8340g1e4pjr8ayzl2983"
+}

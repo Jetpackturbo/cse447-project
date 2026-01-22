@@ -1,0 +1,64 @@
+_wandb:
+    value:
+        cli_version: 0.23.0
+        e:
+            7pm1bepvfkwo628gq8qspgwc2u8zux0i:
+                codePath: src/myprogram.py
+                codePathLocal: src/myprogram.py
+                cpu_count: 8
+                cpu_count_logical: 16
+                cudaVersion: "13.1"
+                disk:
+                    /:
+                        total: "274743689216"
+                        used: "32908980224"
+                email: jackpli@uw.edu
+                executable: /usr/bin/python
+                git:
+                    commit: 769ed119529ee36c171d65edf41cde84a6c72287
+                    remote: git@github.com:Jetpackturbo/cse447-project.git
+                gpu: NVIDIA GeForce RTX 5090
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Blackwell
+                      cudaCores: 21760
+                      memoryTotal: "34190917632"
+                      name: NVIDIA GeForce RTX 5090
+                      uuid: GPU-ebcf858a-727b-966d-72e6-443b0dd578b1
+                host: vhagar.cs.washington.edu
+                memory:
+                    total: "66991665152"
+                os: Linux-6.12.0-124.21.1.el10_1.x86_64-x86_64-with-glibc2.39
+                program: /data/cse447-project/src/myprogram.py
+                python: CPython 3.12.12
+                root: /data/cse447-project
+                startedAt: "2026-01-22T01:03:41.267765Z"
+                writerId: 7pm1bepvfkwo628gq8qspgwc2u8zux0i
+        m: []
+        python_version: 3.12.12
+        t:
+            "1":
+                - 1
+                - 5
+                - 11
+                - 49
+                - 51
+                - 53
+                - 71
+                - 84
+                - 95
+            "2":
+                - 1
+                - 5
+                - 11
+                - 49
+                - 51
+                - 53
+                - 71
+                - 84
+                - 95
+            "4": 3.12.12
+            "5": 0.23.0
+            "6": 4.57.3
+            "12": 0.23.0
+            "13": linux-x86_64

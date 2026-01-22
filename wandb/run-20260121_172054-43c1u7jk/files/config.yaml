@@ -1,0 +1,53 @@
+_wandb:
+    value:
+        cli_version: 0.23.0
+        e:
+            piolxsm8tvwgtm619xv1mwcw1ntf000p:
+                args:
+                    - test
+                    - --test_data
+                    - example/input.txt
+                    - --test_output
+                    - output/pred.txt
+                codePath: src/myprogram.py
+                codePathLocal: src/myprogram.py
+                email: jackpli@uw.edu
+                executable: /usr/bin/python
+                git:
+                    commit: 769ed119529ee36c171d65edf41cde84a6c72287
+                    remote: git@github.com:Jetpackturbo/cse447-project.git
+                host: vhagar.cs.washington.edu
+                os: Linux-6.12.0-124.21.1.el10_1.x86_64-x86_64-with-glibc2.39
+                program: /data/cse447-project/src/myprogram.py
+                python: CPython 3.12.12
+                root: /data/cse447-project
+                startedAt: "2026-01-22T01:20:54.771748Z"
+                writerId: piolxsm8tvwgtm619xv1mwcw1ntf000p
+        m: []
+        python_version: 3.12.12
+        t:
+            "1":
+                - 1
+                - 5
+                - 11
+                - 49
+                - 51
+                - 53
+                - 71
+                - 84
+                - 95
+            "2":
+                - 1
+                - 5
+                - 11
+                - 49
+                - 51
+                - 53
+                - 71
+                - 84
+                - 95
+            "4": 3.12.12
+            "5": 0.23.0
+            "6": 4.57.3
+            "12": 0.23.0
+            "13": linux-x86_64
