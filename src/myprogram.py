@@ -25,7 +25,7 @@ logging.basicConfig(
 LOGGER = logging.getLogger(__name__)
 
 # Initialize Weights & Biases
-wandb.init(project="CSE447")
+# wandb.init(project="CSE447")
 
 # MODEL NAME 
 model_name = "Qwen/Qwen3-0.6B"
@@ -35,7 +35,7 @@ class MyModel:
     This is a starter model to get you started. Feel free to modify this file.
     """
     @classmethod
-    def __init__(cls):
+    def __init__(cls, trainer, tokenizer=None):
         cls.trainer = None
         cls.tokenizer = AutoTokenizer.from_pretrained(model_name)
 
@@ -76,19 +76,20 @@ class MyModel:
             reward_funcs=accuracy_reward,
             train_dataset=train_data,
         )
-        self.trainer.train()
+        # self.trainer.train()
 
-    def run_pred(self, data):
+    @classmethod
+    def run_pred(cls, data):
         # inference
         preds = []
-        self.trainer.model.eval()
+        cls.trainer.model.eval()
         for inp in data:
             message = [
                 {"role": "system", "content": "Please reason step by step, and put your final answer within \\boxed{}."},
                 {"role": "user", "content": "Generate the next three most likely unicode characters to follow the input. The input is not necessarily in English, it may be in any human language."+inp}
             ]
             with torch.no_grad():
-                response = self.trainer.model.generate(message, max_new_tokens=16384, temperature=0.6, top_p=0.7, top_k=50,)
+                response = cls.trainer.model.generate(message, max_new_tokens=16384, temperature=0.6, top_p=0.7, top_k=50,)
                 # identify text within the boxed region
                 pred_text = re.search(r'\\boxed\{(.*?)\}', response[0]['generation']['content'], re.DOTALL).group(1)
                 preds.append(pred_text)
@@ -97,13 +98,20 @@ class MyModel:
     def save(self, work_dir):
         # save model to work_dir from trainer
         self.trainer.model.save_pretrained(work_dir)
+        self.tokenizer.save_pretrained(work_dir)
 
-    @classmethod
-    def load(cls, work_dir):
+    def load(work_dir):
         # load from work_dir
-        model = cls()
-        model.trainer = GRPOTrainer.load_from_checkpoint(work_dir)
-        return model
+        # Load a transformers model from the specified directory
+        model = AutoModelForCausalLM.from_pretrained(work_dir, device_map='auto', trust_remote_code=True)
+        tokenizer = AutoTokenizer.from_pretrained(work_dir, trust_remote_code=True)
+        trainer = GRPOTrainer(
+            model=model,
+            reward_funcs=accuracy_reward,
+        )
+        LOGGER.info("Model and tokenizer loaded from {}".format(work_dir))
+        ret = MyModel(trainer, tokenizer)
+        return ret
 
 if __name__ == '__main__':
     parser = ArgumentParser(formatter_class=ArgumentDefaultsHelpFormatter)

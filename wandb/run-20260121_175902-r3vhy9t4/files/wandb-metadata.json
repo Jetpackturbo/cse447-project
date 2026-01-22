@@ -1,0 +1,49 @@
+{
+  "os": "Linux-6.12.0-124.21.1.el10_1.x86_64-x86_64-with-glibc2.39",
+  "python": "CPython 3.12.12",
+  "startedAt": "2026-01-22T01:59:02.940465Z",
+  "args": [
+    "test",
+    "--work_dir",
+    "work",
+    "--test_data",
+    "example/input.txt",
+    "--test_output",
+    "output/pred.txt"
+  ],
+  "program": "/data/cse447-project/src/myprogram.py",
+  "codePath": "src/myprogram.py",
+  "codePathLocal": "src/myprogram.py",
+  "git": {
+    "remote": "git@github.com:Jetpackturbo/cse447-project.git",
+    "commit": "f8d7349dd32f9d1aa1749bb5678be967355b128b"
+  },
+  "email": "jackpli@uw.edu",
+  "root": "/data/cse447-project",
+  "host": "vhagar.cs.washington.edu",
+  "executable": "/usr/bin/python",
+  "cpu_count": 8,
+  "cpu_count_logical": 16,
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "274743689216",
+      "used": "32908980224"
+    }
+  },
+  "memory": {
+    "total": "66991665152"
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA GeForce RTX 5090",
+      "memoryTotal": "34190917632",
+      "cudaCores": 21760,
+      "architecture": "Blackwell",
+      "uuid": "GPU-ebcf858a-727b-966d-72e6-443b0dd578b1"
+    }
+  ],
+  "cudaVersion": "13.1",
+  "writerId": "cnckb4o6c7s2mum5ce62lzbnwq1xqvcl"
+}

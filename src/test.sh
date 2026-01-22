@@ -1,0 +1,1 @@
+python src/myprogram.py test --work_dir work --test_data example/input.txt --test_output output/pred.txt
