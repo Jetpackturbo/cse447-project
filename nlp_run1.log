@@ -1,0 +1,14 @@
+2026-01-21 18:06:19,792 - accelerate.utils.modeling - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2026-01-21 18:07:04,403 - accelerate.utils.modeling - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2026-01-21 18:07:28,008 - accelerate.utils.modeling - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2026-01-21 18:07:28,545 - __main__ - INFO - Model and tokenizer loaded from work
+2026-01-21 18:08:24,857 - accelerate.utils.modeling - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2026-01-21 18:08:25,392 - __main__ - INFO - Model and tokenizer loaded from work
+2026-01-21 18:08:36,875 - accelerate.utils.modeling - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2026-01-21 18:08:37,410 - __main__ - INFO - Model and tokenizer loaded from work
+2026-01-21 18:09:59,975 - accelerate.utils.modeling - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2026-01-21 18:10:00,514 - __main__ - INFO - Model and tokenizer loaded from work
+2026-01-21 18:10:46,481 - accelerate.utils.modeling - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2026-01-21 18:10:47,016 - __main__ - INFO - Model and tokenizer loaded from work
+2026-01-21 18:12:50,258 - accelerate.utils.modeling - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2026-01-21 18:12:50,799 - __main__ - INFO - Model and tokenizer loaded from work
